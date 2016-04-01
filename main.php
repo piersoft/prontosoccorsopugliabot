@@ -51,7 +51,8 @@ if (strpos($text,'@prontosoccorsopugliabot') !== false) $text =str_replace("@pro
 		$this->create_keyboard_temp($telegram,$chat_id);
 		exit;
 	}elseif($text == "/Lecce" || $text == "Lecce"){
-
+		$content = array('chat_id' => $chat_id, 'text' => "Elaborazione, attendere...",'disable_web_page_preview'=>true);
+		$telegram->sendMessage($content);
 		$urlgd  ="https://spreadsheets.google.com/tq?tqx=out:csv&tq=SELECT%20A%20&key=".GDRIVEKEY."&gid=".GDRIVEGID0;
 		$inizio=1;
 		$homepage ="";
@@ -74,7 +75,8 @@ if (strpos($text,'@prontosoccorsopugliabot') !== false) $text =str_replace("@pro
 	//	$this->create_keyboard_temp($telegram,$chat_id);
 	//	exit;
 }elseif($text == "/Brindisi" || $text == "Brindisi"){
-
+	$content = array('chat_id' => $chat_id, 'text' => "Elaborazione, attendere...",'disable_web_page_preview'=>true);
+	$telegram->sendMessage($content);
 		$urlgd  ="https://spreadsheets.google.com/tq?tqx=out:csv&tq=SELECT%20A%20&key=".GDRIVEKEY."&gid=".GDRIVEGID5;
 		$inizio=1;
 		$homepage ="";
@@ -97,7 +99,8 @@ if (strpos($text,'@prontosoccorsopugliabot') !== false) $text =str_replace("@pro
 	//	$this->create_keyboard_temp($telegram,$chat_id);
 	//	exit;
 }elseif($text == "/Taranto" || $text == "Taranto"){
-
+	$content = array('chat_id' => $chat_id, 'text' => "Elaborazione, attendere...",'disable_web_page_preview'=>true);
+	$telegram->sendMessage($content);
 		$urlgd  ="https://spreadsheets.google.com/tq?tqx=out:csv&tq=SELECT%20A%20&key=".GDRIVEKEY."&gid=".GDRIVEGID6;
 		$inizio=1;
 		$homepage ="";
@@ -120,7 +123,8 @@ if (strpos($text,'@prontosoccorsopugliabot') !== false) $text =str_replace("@pro
 	//	$this->create_keyboard_temp($telegram,$chat_id);
 	//	exit;
 }elseif($text == "/Bari" || $text == "Bari"){
-
+	$content = array('chat_id' => $chat_id, 'text' => "Elaborazione, attendere...",'disable_web_page_preview'=>true);
+	$telegram->sendMessage($content);
 		$urlgd  ="https://spreadsheets.google.com/tq?tqx=out:csv&tq=SELECT%20A%20&key=".GDRIVEKEY."&gid=".GDRIVEGID3;
 		$inizio=1;
 		$homepage ="";
@@ -143,7 +147,8 @@ if (strpos($text,'@prontosoccorsopugliabot') !== false) $text =str_replace("@pro
 	//	$this->create_keyboard_temp($telegram,$chat_id);
 	//	exit;
 }elseif($text == "/BAT" || $text == "BAT"){
-
+	$content = array('chat_id' => $chat_id, 'text' => "Elaborazione, attendere...",'disable_web_page_preview'=>true);
+	$telegram->sendMessage($content);
 		$urlgd  ="https://spreadsheets.google.com/tq?tqx=out:csv&tq=SELECT%20A%20&key=".GDRIVEKEY."&gid=".GDRIVEGID2;
 		$inizio=1;
 		$homepage ="";
@@ -166,7 +171,8 @@ if (strpos($text,'@prontosoccorsopugliabot') !== false) $text =str_replace("@pro
 	//	$this->create_keyboard_temp($telegram,$chat_id);
 	//	exit;
 }elseif($text == "/Foggia" || $text == "Foggia"){
-
+	$content = array('chat_id' => $chat_id, 'text' => "Elaborazione, attendere...",'disable_web_page_preview'=>true);
+	$telegram->sendMessage($content);
 		$urlgd  ="https://spreadsheets.google.com/tq?tqx=out:csv&tq=SELECT%20A%20&key=".GDRIVEKEY."&gid=".GDRIVEGID4;
 		$inizio=1;
 		$homepage ="";
@@ -191,7 +197,8 @@ if (strpos($text,'@prontosoccorsopugliabot') !== false) $text =str_replace("@pro
 	}
 		elseif(strpos($text,'_') !== false)
 		{
-
+			$content = array('chat_id' => $chat_id, 'text' => "Elaborazione, attendere...",'disable_web_page_preview'=>true);
+			$telegram->sendMessage($content);
 			$gid=GDRIVEGID1;
 			if (strpos($text,'BA_') !== false){
 					$gid=GDRIVEGID3;
