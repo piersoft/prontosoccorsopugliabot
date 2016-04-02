@@ -42,7 +42,8 @@ if (strpos($text,'@prontosoccorsopugliabot') !== false) $text =str_replace("@pro
 		📒 -> Codice giallo: mediamente critico, presenza di rischio evolutivo, possibile pericolo di vita\n
 		📗 -> Codice verde: poco critico, assenza di rischi evolutivi, prestazioni differibili\n
 		📂 -> Codice bianco: non critico, prestazioni differibili\n
-		Questo bot è stato realizzato da @piersoft e non è collegato in alcun modo con salute.puglia.it. Il progetto e il codice sorgente sono liberamente riutilizzabili con licenza MIT.";
+Questo bot è stato realizzato da @piersoft e non è collegato in alcun modo con salute.puglia.it. Il progetto e il codice sorgente sono liberamente riutilizzabili con licenza MIT. Le coordinate dei P.S. sono state ricavate dal DB di openStreetMap con licenza odbl.
+\nPer la mappa dei Pronti Soccorso --> http://u.osmfr.org/m/78971/ .\nPer tutti i miei Bot -> http://www.piersoft.it/?p=626";
 		$content = array('chat_id' => $chat_id, 'text' => $reply,'disable_web_page_preview'=>true);
 		$telegram->sendMessage($content);
 		$log=$today. ",new_info,," .$chat_id. "\n";
