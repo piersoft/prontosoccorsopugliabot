@@ -91,23 +91,31 @@ Questo bot è stato realizzato da @piersoft e non è collegato in alcun modo con
 			$dist = floatval(rad2deg($dist));
 			$miles = floatval($dist * 60 * 1.1515 * 1.609344);
 			$data=0.0;
+
+			$t=0;
 			if ($miles >=1){
-
+				$t=floatval(50);
+				$data1=number_format($miles, 2, '.', '');
 			  $data =number_format($miles, 2, '.', '')." Km";
-			} else $data =number_format(($miles*1000), 0, '.', '')." mt";
+			} else {
+				$t=floatval(50*1000);
 
-			$t=floatval(50);
+				$data1=number_format(($miles*1000), 0, '.', '');
+				$data =number_format(($miles*1000), 0, '.', '')." mt";
+
+			}
+
 
 			  $csv[$i][100]= array("distance" => "value");
 
-			  $csv[$i][100]= $miles;
+			  $csv[$i][100]= $data1;
 			  $csv[$i][101]= array("distancemt" => "value");
 
 			  $csv[$i][101]= $data;
 
 
 
-			      if ($miles < $t)
+			      if ($data1 < $t)
 			      {
 							$c++;
 			        $distanza[$i]['distanza'] =$csv[$i][100];
